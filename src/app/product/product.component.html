@@ -1,8 +1,11 @@
 <p>product works!</p>
 
 <h1>{{title}}</h1>
+<input type="number" name="price" [(ngModel)]="filter">
 <table>
-    <th *ngFor="let items of listProduct;">
+
+       <th *ngFor="let items of listProduct;,let i=index">
+        <div *ngIf="items.price<filter || filter==null">
         <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="assets/{{items.title}}.webp" alt="Card image cap">
         <div class="card-body">
@@ -22,10 +25,11 @@
             </tr>
             
           </table>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <button class="btn btn-primary" (click)="buy(i)" [disabled]="items.quantity==0">Buy !</button>
+          <button class="btn btn-primary" (click)="like(i)">like !</button>
         </div>
       </div>
-    
+    </div>
 <!--      
         <th>
             id
