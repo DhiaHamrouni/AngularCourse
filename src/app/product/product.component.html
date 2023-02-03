@@ -1,0 +1,55 @@
+<p>product works!</p>
+
+<h1>{{title}}</h1>
+<table>
+    <th *ngFor="let items of listProduct;">
+        <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/{{items.title}}.webp" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{items.title}}</h5>
+          <table class="card-text">
+            <tr>
+                <th>id : {{items.id}}</th>
+            </tr>
+            <tr>
+                <th>price : {{items.price}}</th>
+            </tr>
+            <tr>
+                <th>quantity : {{items.quantity}}</th>
+            </tr>          
+            <tr>
+                <th>likes : {{items.like}}</th>
+            </tr>
+            
+          </table>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    
+<!--      
+        <th>
+            id
+        </th>
+        <th>
+            title
+        </th>
+        <th>
+            price
+        </th>
+        <th>
+            quantity
+        </th>
+        <th>
+            Like
+        </th>
+        <tr *ngFor="let items of listProduct;">
+        <th>{{items.id}}</th>
+        <th>{{items.title}}</th>
+        <th>{{items.price}}</th>
+        <th>{{items.quantity}}</th>
+        <th>{{items.like}}</th>
+        <button>Buy!</button>
+        <button>Like!</button>
+    </tr>   
+</table>
+-->
