@@ -30,5 +30,4 @@ export class ProductComponent implements OnInit {
   like(i:number){
     this.listProduct[i].like++;
   }
-
 }

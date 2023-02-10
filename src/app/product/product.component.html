@@ -27,6 +27,8 @@
           </table>
           <button class="btn btn-primary" (click)="buy(i)" [disabled]="items.quantity==0">Buy !</button>
           <button class="btn btn-primary" (click)="like(i)">like !</button>
+          <button class="btn btn-primary" routerLink="/details/{{items.id}}" >Details</button>
+
         </div>
       </div>
     </div>

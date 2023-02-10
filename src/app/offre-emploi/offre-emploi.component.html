@@ -1,0 +1,20 @@
+<table>
+<th>
+    refrence
+</th>
+<th>
+    title
+</th>
+<th>
+    entreprise
+</th>
+
+<tr *ngFor="let items of listeEmploi;">
+<th>{{items.refrence}}</th>
+<th>{{items.titre}}</th>
+<th>{{items.entreprise}}</th>
+<button [disabled]="items.etat==false">Postuler !</button>
+</tr>   
+</table>
+<button (click)="srn()">Bilan !</button>
+

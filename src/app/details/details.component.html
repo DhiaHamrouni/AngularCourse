@@ -1,0 +1,23 @@
+<table>
+
+    <th *ngFor="let items of listproduit;,let i=index">
+     <div *ngIf="items.id==id">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/{{items.title}}.webp" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{items.title}}</h5>
+              <table class="card-text">
+                <tr>
+                    <th>id : {{items.id}}</th>
+                </tr>
+                <tr>
+                    <th>price : {{items.price}}</th>
+                </tr>
+                <tr>
+                    <th>quantity : {{items.quantity}}</th>
+                </tr>          
+                <tr>
+                    <th>likes : {{items.like}}</th>
+                </tr>
+                
+              </table>
