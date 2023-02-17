@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OffreEmploiComponent } from './offre-emploi/offre-emploi.component';
 import { ArticleComponent } from './article/article.component';
 import { DetailsComponent } from './details/details.component';
+import { FormProductComponent } from './form-product/form-product.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailsComponent } from './details/details.component';
     NavbarComponent,
     OffreEmploiComponent,
     ArticleComponent,
-    DetailsComponent
+    DetailsComponent,
+    FormProductComponent
     ],
   imports: [
     BrowserModule,
