@@ -6,6 +6,7 @@ import { FormProductComponent } from './form-product/form-product.component';
 import { HomeComponent } from './home/home.component';
 import { OffreEmploiComponent } from './offre-emploi/offre-emploi.component';
 import { ProductComponent } from './product/product.component';
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/products',pathMatch:'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'offres',component:OffreEmploiComponent},
   {path:'details/:id',component:DetailsComponent},
   {path:'saveproduct',component:FormProductComponent},
+  {path:'tdf',component:TemplateDrivenFormComponentComponent},
   {path:'**',component:HomeComponent}
 ];
 

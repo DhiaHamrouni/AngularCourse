@@ -11,6 +11,7 @@ import { OffreEmploiComponent } from './offre-emploi/offre-emploi.component';
 import { ArticleComponent } from './article/article.component';
 import { DetailsComponent } from './details/details.component';
 import { FormProductComponent } from './form-product/form-product.component';
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormProductComponent } from './form-product/form-product.component';
     OffreEmploiComponent,
     ArticleComponent,
     DetailsComponent,
-    FormProductComponent
+    FormProductComponent,
+    TemplateDrivenFormComponentComponent
     ],
   imports: [
     BrowserModule,
