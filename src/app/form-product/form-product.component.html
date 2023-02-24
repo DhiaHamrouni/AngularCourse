@@ -19,6 +19,9 @@
     <input type="number" name="quantity" class="form-control" #quantity="ngModel" [(ngModel)]="p.quantity"   placeholder="quantity"  min="100">
     <p class="alert alert-danger" *ngIf="quantity.invalid"> quantité minimal est 100 </p>
   </div>
+  <div class="preview" *ngIf="imgFile">
+    <img [src]="imgFile" style="width:400px; height:250px">
+  </div>  
  <!-- <form>
     <div class="form-group">
       <label for="exampleFormControlFile1">Product Image </label>

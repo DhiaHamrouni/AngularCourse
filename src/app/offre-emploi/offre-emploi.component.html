@@ -1,3 +1,9 @@
+<tr>
+    <input type="text" name="varia" [(ngModel)]="quant"  placeholder="state "/>
+    </tr>
+    <tr>
+    <input type="text" name="critere" [(ngModel)]="crit"  placeholder="Criteria "/>
+    </tr>
 <table>
 <th>
     refrence
@@ -17,4 +23,7 @@
 </tr>   
 </table>
 <button (click)="srn()">Bilan !</button>
+<button class="btn btn-primary" (click)="onnumber()"> Search </button>
+{{result}}
+
 

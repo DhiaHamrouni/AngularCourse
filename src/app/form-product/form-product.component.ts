@@ -10,10 +10,12 @@ import { ServicesprodService } from '../services/servicesprod.service';
 })
 export class FormProductComponent implements OnInit {
   p!:Product;
+  imgFile!: string;
   constructor(private ps:ServicesprodService) { }
 
   ngOnInit(): void {
     this.p=new Product();
+    this.p.like=0;
   }
   add(p:Product)
 {

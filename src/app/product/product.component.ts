@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { exit } from 'process';
 import { Product } from '../core/model/product';
+import { ServicesprodService } from '../services/servicesprod.service';
 
 @Component({
   selector: 'app-product',
@@ -11,14 +12,14 @@ export class ProductComponent implements OnInit {
   title : string ="zdahmed"
   listProduct!: Product[];
   filter!: number;
-  constructor() { }
+  quant!:number;
+  crit!:string;
+  result!:number;
+  constructor(public ps:ServicesprodService) { 
+    this.listProduct=this.ps.listproduct;
+    }
 
   ngOnInit(): void {
-    this.listProduct=[
-      {id: 1, title: "T-shirt 1", price: 18, quantity: 0, like: 0},
-      {id: 2, title: "T-shirt 2", price: 21, quantity: 10, like: 0},
-      {id: 3, title: "T-shirt 3", price: 16, quantity: 8, like: 0},
-    ]
   }
   buy(i:number){
     if (this.listProduct[i].quantity==0)
@@ -30,4 +31,9 @@ export class ProductComponent implements OnInit {
   like(i:number){
     this.listProduct[i].like++;
   }
+  onnumber(){
+    this.result=this.ps.searchforproduct(this.listProduct,this.crit,this.quant);
+  }
+
+
 }

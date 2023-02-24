@@ -14,5 +14,8 @@ export class TemplateDrivenFormComponentComponent implements OnInit {
     
   ngOnInit(): void {
   }
+  submit(f:Formulaire){
+    console.log(f);
+  }
 
 }

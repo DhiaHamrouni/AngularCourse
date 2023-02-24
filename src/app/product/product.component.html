@@ -1,7 +1,12 @@
 <p>product works!</p>
 
 <h1>{{title}}</h1>
-<input type="number" name="price" [(ngModel)]="filter">
+<tr>
+<input type="number" name="varia" [(ngModel)]="quant"  placeholder="Quantity to be filtered "/>
+</tr>
+<tr>
+<input type="text" name="critere" [(ngModel)]="crit"  placeholder="Criteria "/>
+</tr>
 <table>
 
        <th *ngFor="let items of listProduct;,let i=index">
@@ -32,6 +37,11 @@
         </div>
       </div>
     </div>
+
+</table>
+<button class="btn btn-primary" (click)="onnumber()"> Search </button>
+{{result}}
+
 <!--      
         <th>
             id
