@@ -1,0 +1,11 @@
+{
+  "products":[
+    {"id": 1, "title": "T-shirt 1", "price": 18, "quantity": 0, "like": 0},
+    {"id": 2, "title": "T-shirt 2", "price": 21, "quantity": 10, "like": 0},
+    {"id": 3, "title": "T-shirt 3", "price": 16, "quantity": 8, "like": 0}
+  ],
+  "emplois":[
+    {"refrence":"1234","titre":"SRN","entreprise":"Nimo","etat":true},
+    {"refrence":"2","titre":"Amogos","entreprise":"Discord","etat":false}
+  ]
+}

@@ -12,6 +12,7 @@ import { ArticleComponent } from './article/article.component';
 import { DetailsComponent } from './details/details.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TemplateDrivenFormComponentComponent } from './template-driven-form-com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

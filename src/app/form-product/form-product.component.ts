@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from 'express';
 import { Product } from '../core/model/product';
 import { ProductComponent } from '../product/product.component';
+import { ConsumeService } from '../services/consume.service';
 import { ServicesprodService } from '../services/servicesprod.service';
 
 @Component({
@@ -11,7 +13,7 @@ import { ServicesprodService } from '../services/servicesprod.service';
 export class FormProductComponent implements OnInit {
   p!:Product;
   imgFile!: string;
-  constructor(private ps:ServicesprodService) { }
+  constructor(private ps:ServicesprodService,private consume:ConsumeService,private roue:Router) { }
 
   ngOnInit(): void {
     this.p=new Product();
@@ -19,9 +21,7 @@ export class FormProductComponent implements OnInit {
   }
   add(p:Product)
 {
-  console.log(p);
-  this.ps.listproduct.push(p);
-  console.log(this.ps.listproduct);
+  this.consume.postProducts(p);
 }
     
 }
